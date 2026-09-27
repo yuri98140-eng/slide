@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo 100% branco no site */
+html, body {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+/* ESTILIZAÇÃO DO INPUT RANGE */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  /* Fundo: Barra preenchida BRANCA, barra restante ESCURA */
+  background: linear-gradient(to right, #ffffff 60%, #1c1c1f 60%);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+/* PINO/INDICADOR PRETO (CHROME, SAFARI, EDGE, OPERA) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #000000; /* Pino Preto */
+  border: 1px solid #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background-color: #1a1a1a;
+}
+
+/* PINO/INDICADOR PRETO (FIREFOX) */
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #000000; /* Pino Preto */
+  border: 1px solid #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  background-color: #1a1a1a;
+}
